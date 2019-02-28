@@ -4,7 +4,7 @@ const Service = require('egg').Service;
 class Community extends Service {
     async find(query, page, limit) {
         const data = await this.app.knex('community')
-            .select('id', 'name')
+            .select('id', 'name', 'area')
             .where('name', 'like', `%${query}%`)
             .where({ isDel: 0 })
             .offset(page * limit)

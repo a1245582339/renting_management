@@ -43,12 +43,12 @@ export default new Router({
         {
           path: 'community',
           name: 'community',
-          component: () => import('./views/content/situation'), 
+          component: () => import('./views/content/community'), 
         },
         {
           path: 'room',
           name: 'room',
-          component: () => import('./views/content/editLib'), 
+          component: () => import('./views/content/room'), 
         },
         {
           path: 'university',

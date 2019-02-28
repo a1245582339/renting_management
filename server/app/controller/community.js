@@ -16,7 +16,7 @@ class Community extends Controller {
         const ctx = this.ctx;
         const id = ctx.request.query.id
         const data = ctx.request.body.data
-        if (id && id !== 'undefined') {
+        if (id !== '' && id !== 'undefined') {
             await ctx.service.community.update(id, data)
         } else {
             await ctx.service.community.create(data)

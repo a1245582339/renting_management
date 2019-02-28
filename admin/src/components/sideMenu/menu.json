@@ -6,7 +6,7 @@
 }, {
     "title": " 房间管理",
     "icon": "ios-apps",
-    "name": "seat",
+    "name": "room",
     "children": [{
         "title": "社区管理",
         "icon": "md-time",
@@ -23,7 +23,7 @@
     "icon": "ios-book",
     "name": "university",
     "path": "university"
-}, , {
+}, {
     "title": "订单管理",
     "icon": "ios-book",
     "name": "order",
