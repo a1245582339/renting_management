@@ -24,7 +24,7 @@
     "name": "university",
     "path": "university"
 }, {
-    "title": "订单管理",
+    "title": "预约管理",
     "icon": "ios-book",
     "name": "order",
     "path": "order"

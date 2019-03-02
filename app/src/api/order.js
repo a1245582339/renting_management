@@ -1,8 +1,8 @@
 import http from './index';
 const domin  = '/api/order';
 
-export const getOrder = query => {
-    return http.get(`${domin}`, {params: query})
+export const getOrder = params => {
+    return http.get(`${domin}`, {params})
 }
 
 export const updateOrder = (params, data) => {

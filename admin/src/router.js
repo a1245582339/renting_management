@@ -58,7 +58,7 @@ export default new Router({
         {
           path: 'order',
           name: 'order',
-          component: () => import('./views/content/university'), 
+          component: () => import('./views/content/order'), 
         },
         {
           path: 'admin',

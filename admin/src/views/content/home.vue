@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1 style="margin: 100px">欢迎登录座位管理系统！</h1>
+    <div class="home">
+        <img src="@/assets/images/tit.png" />
     </div>
 </template>
 <script>
@@ -9,5 +9,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.home {
+    padding: 100px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/images/head-img.png);
+    background-repeat: no-repeat;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <Modal v-model="show" width="500" title="创建房间" @on-visible-change="showChange">
+    <Modal v-model="show" width="800" title="创建房间" @on-visible-change="showChange">
         <div>
             <Form ref="form" :model="form" :rules="rule">
                 <FormItem prop="name">

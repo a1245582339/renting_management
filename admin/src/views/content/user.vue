@@ -1,6 +1,6 @@
 <template>
     <div>
-        <CellGroup style="width: 500px;background: #fff">
+        <CellGroup style="background: #fff">
             <Cell title="登录名" :extra="user.login_name" />
             <Cell title="角色" :extra="user.role === 1 ? '超级管理员' : '管理员'" />
             <Cell title="密码" label="点击修改" extra="********" @click.native="show = true" />
