@@ -1,14 +1,14 @@
 <template>
   <div class="login">
-    <span class="title">登录</span>
+    <span class="title">{{$t("login.title")}}</span>
     <van-cell-group class="form">
-      <van-field v-model="form.id" required clearable label="学号" placeholder="请输入学号"
+      <van-field v-model="form.id" required clearable :label="$t('user.id')" :placeholder="$t('login.label.id')"
         />
 
-      <van-field v-model="form.password" type="password" label="密码" placeholder="请输入密码" required  right-icon="question-o" @click-right-icon="$toast('默认为111111')"  />
+      <van-field v-model="form.password" type="password" :label="$t('user.password')" :placeholder="$t('login.label.password')" required  />
     </van-cell-group>
     <div style="padding:20px 10px">
-      <van-button type="info" size="large" @click="login">登录</van-button>
+      <van-button type="info" size="large" @click="login">{{$t("login.title")}}</van-button>
     </div>
     
   </div>
@@ -37,10 +37,10 @@
             setToken(res.data.token)
             this.$router.push('/main')
           } else {
-            Toast.fail('用户名或密码错误！');
+            Toast.fail(this.$t('login.fail.error'));
           }
         } else {
-          Toast.fail('请输入用户名密码！');
+          Toast.fail(this.$t('login.fail.empty'));
         }
       }
     }

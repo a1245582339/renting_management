@@ -6,6 +6,11 @@ import store from './store'
 import Vant from 'vant';
 import AMap from 'vue-amap';
 import 'vant/lib/index.css';
+import messages from './json/i18n.json';
+import VueI18n from 'vue-i18n'
+import { getLanguage, setLanguage } from '@/utils/language';
+
+Vue.use(VueI18n)
 
 Vue.use(Vant);
 
@@ -28,8 +33,20 @@ AMap.initAMapApiLoader({
   uiVersion: "1.0"
 });
 
+let language = getLanguage()
+if (!language || language === 'undefined') {
+  setLanguage('zh-CN')
+  language = 'zh-CN'
+}
+
+const i18n = new VueI18n({
+  locale: language, // 语言标识
+  messages
+})
+
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

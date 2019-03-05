@@ -42,19 +42,8 @@
                 </FormItem>
                 
             </Form>
-            <div class="amap-page-container">
-                <el-amap
-                    style="height: 500px"
-                    vid="amapDemo"  
-                    :center="center"
-                    :zoom="16"  
-                    class="amap-demo"
-                    :events="events">
-                    <el-amap-marker vid="component-marker" :position="[lng, lat]" ></el-amap-marker>
-                </el-amap>
-                <div class="toolbar">
-                    position: [{{ lng }}, {{ lat }}] address: {{ address }}
-                </div>
+            <div style="height: 300px" ref="div">
+                
             </div>
         </div>
         <div slot="footer">
@@ -69,6 +58,7 @@ import { getCommunity } from '@/api/community';
 import area from '@/json/area.json'
 import lodash from 'lodash';
 import { communityIdToArea } from '@/utils/area';
+import BMap from 'BMap'
     export default {
         props: ['create_modal_show', 'data'],
         data() {
@@ -83,33 +73,8 @@ import { communityIdToArea } from '@/utils/area';
             return {
                 loading: false,
                 show: false,
+                map: {},
                 center: [117.286371, 39.069145],
-                lng: 117.286371, 
-                lat: 39.069145,
-                events: {
-                    click(e) {
-                        let { lng, lat } = e.lnglat;
-                       
-                        vm.lng = lng;
-                        vm.lat = lat;
-                        this.form.longitude = lng
-                        this.form.latitude = lat
-                        // 这里通过高德 SDK 完成。
-
-                        var geocoder = new AMap.Geocoder({
-                            radius: 1000,
-                            extensions: "all"
-                        });
-                        geocoder.getAddress([lng, lat], function(status, result) {
-
-                            if (status === "complete" && result.info === "OK") {
-                                if (result && result.regeocode) {
-                                    vm.address = result.regeocode.formattedAddress;
-                                }
-                            }
-                        });
-                    }
-                },
                 form: {
                     id: '',
                     name: '',
@@ -117,7 +82,9 @@ import { communityIdToArea } from '@/utils/area';
                     address: '',
                     tel: '',
                     community_id: '',
-                    price: ''
+                    price: '',
+                    latitude: '',
+                    longitude: ''
                 },
                 address: '',
                 area: area,
@@ -147,15 +114,33 @@ import { communityIdToArea } from '@/utils/area';
         methods: {
             showChange(val) {
                 if (val) {
-                    console.log(this.data)
+                    // console.log(this.data)
                     this.form = this.data
-                    this.lng = this.data.longitude
-                    this.lat = this.data.latitude
                     this.center = [this.data.longitude, this.data.latitude]
+                    this.$nextTick(() => {
+                        this.createMap()
+                    })
+                    
                 } else {
                     this.$emit('noshow')
                     this.$refs.form.resetFields();
                 }
+            },
+            createMap() {
+                const vm = this
+                const div = this.$refs.div
+                vm.map = new BMap.Map(div)
+                vm.map.centerAndZoom(new BMap.Point(vm.center[0], vm.center[1]), 16)
+                var marker = new BMap.Marker(new BMap.Point(vm.center[0], vm.center[1]));
+                vm.map.addOverlay(marker);            //增加点
+                vm.map.enableScrollWheelZoom(true);
+                vm.map.addEventListener("click",function(e){
+                    vm.map.clearOverlays();       
+                    marker = new BMap.Marker(new BMap.Point(e.point.lng, e.point.lat));
+                    vm.map.addOverlay(marker);
+                    vm.form.longitude = e.point.lng
+                    vm.form.latitude = e.point.lat
+                });
             },
             async searchCommunity(query) {
                 if (query) {

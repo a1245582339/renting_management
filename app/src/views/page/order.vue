@@ -3,10 +3,11 @@
         <van-list
             v-model="loading"
             :finished="finished"
-            finished-text="没有更多了"
+            :finished-text="$t('no_more')"
+            :loading-text="$t('loading')"
             @load="onLoad"
         >
-            <van-cell v-for="(item, index) in list" :key="index" :title="`${item.room_name} （${item.status === 0 ? '待联系' : '已租'}）`" :label="'预约时间：' + timestampToDate(item.create_time)"  />
+            <van-cell v-for="(item, index) in list" :key="index" :title="`${item.room_name} （${item.status === 0 ? $t('order.status.pending') : $t('order.status.ordered')}）`" :label="$t('order.time') + timestampToDate(item.create_time)"  />
         </van-list>
     </div>
 </template>

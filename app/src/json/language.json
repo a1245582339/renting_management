@@ -1,0 +1,12 @@
+[
+    {
+        "value": "zh-CN",
+        "text": "简体中文"
+    },{
+        "value": "zh-HK",
+        "text": "繁體中文"
+    },{
+        "value": "en-US",
+        "text": "English"
+    }
+]
