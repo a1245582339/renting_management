@@ -1,5 +1,5 @@
 <template>
-    <Modal v-model="show" width="360" title="创建社区" @on-visible-change="showChange">
+    <Modal v-model="show" width="360" title="更新社区" @on-visible-change="showChange">
         <div>
             <Form ref="form" :model="form" :rules="rule">
                 <FormItem prop="name">

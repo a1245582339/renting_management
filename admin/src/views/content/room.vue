@@ -150,7 +150,8 @@
                     tel: '',
                     community_id: '',
                     price: '',
-
+                    longitude: 117.283496,
+                    latitude: 39.069761
                 }
             }
         },

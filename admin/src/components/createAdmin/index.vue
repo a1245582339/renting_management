@@ -1,5 +1,5 @@
 <template>
-    <Modal v-model="show" width="360" title="创建管理员" @on-visible-change="showChange">
+    <Modal v-model="show" width="360" title="更新管理员" @on-visible-change="showChange">
         <div>
             <Form ref="form" :model="form" :rules="rule">
                 <FormItem prop="login_name">
@@ -16,7 +16,7 @@
         </div>
         <div slot="footer">
             <Button @click="show = false">取消</Button>
-            <Button type="primary" @click="submit">创建</Button>
+            <Button type="primary" @click="submit">提交</Button>
         </div>
     </Modal>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <Modal v-model="show" width="800" title="创建房间" @on-visible-change="showChange">
+    <Modal v-model="show" width="800" title="更新房间" @on-visible-change="showChange">
         <div>
             <Form ref="form" :model="form" :rules="rule">
                 <FormItem prop="name">
@@ -14,17 +14,17 @@
                 </FormItem>
                 <FormItem prop="address">
                     <Input type="text" v-model="form.address" placeholder="请输入具体地址">
-                        <Icon type="md-home" slot="prepend"></Icon>
+                        <Icon type="md-locate" slot="prepend" />
                     </Input>
                 </FormItem>
                 <FormItem prop="tel">
                     <Input type="text" v-model="form.tel" placeholder="请输入手机号">
-                        <Icon type="md-home" slot="prepend"></Icon>
+                        <Icon type="ios-call" slot="prepend" />
                     </Input>
                 </FormItem>
                 <FormItem prop="price">
                     <Input type="text" v-model="form.price" placeholder="请输入月租价格">
-                        <Icon type="md-home" slot="prepend"></Icon>
+                        <Icon type="ios-pricetag" slot="prepend" />
                     </Input>
                 </FormItem>
                 <FormItem prop="community_id">
@@ -36,6 +36,7 @@
                         filterable
                         remote
                         :remote-method="debounce(searchCommunity, 300)"
+                        placeholder="请输入关键字选择"
                         :loading="loading">
                         <Option v-for="(option, index) in options" :value="option.value" :key="index">{{option.label}}</Option>
                     </Select>
@@ -117,9 +118,7 @@ import BMap from 'BMap'
                     // console.log(this.data)
                     this.form = this.data
                     this.center = [this.data.longitude, this.data.latitude]
-                    this.$nextTick(() => {
-                        this.createMap()
-                    })
+                    this.createMap()
                     
                 } else {
                     this.$emit('noshow')
@@ -132,10 +131,12 @@ import BMap from 'BMap'
                 vm.map = new BMap.Map(div)
                 vm.map.centerAndZoom(new BMap.Point(vm.center[0], vm.center[1]), 16)
                 var marker = new BMap.Marker(new BMap.Point(vm.center[0], vm.center[1]));
-                vm.map.addOverlay(marker);            //增加点
+                if (this.form.id) {
+                    vm.map.addOverlay(marker);            //增加点
+                }
                 vm.map.enableScrollWheelZoom(true);
                 vm.map.addEventListener("click",function(e){
-                    vm.map.clearOverlays();       
+                    vm.map.clearOverlays();       // 删除点
                     marker = new BMap.Marker(new BMap.Point(e.point.lng, e.point.lat));
                     vm.map.addOverlay(marker);
                     vm.form.longitude = e.point.lng

@@ -8,6 +8,9 @@
             <van-cell :title="$t('user.tel')" :value="user.tel" is-link @click="telShow = true" />
             <van-cell :title="$t('user.password')" :value="$t('user.change_password')" is-link @click="passShow = true" />
             <van-cell :title="$t('user.language')" is-link @click="lanShow = true" :value="language" />
+            <div style="padding:20px 10px">
+                <van-button type="danger" size="large" @click="logout">{{$t("login.logout")}}</van-button>
+            </div>
 
             <van-popup v-model="lanShow" position="bottom" >
                 <van-picker :columns="columns" show-toolbar @cancel="lanShow = false" @confirm="checkLanguage" />
@@ -61,6 +64,7 @@ import { updateUserInfo, checkPassword } from '@/api/user'
 import language from '@/json/language.json';
 import { Toast } from 'vant';
 import { getLanguage, setLanguage } from '@/utils/language';
+import { removeToken } from '@/utils/auth';
 export default {
     data() {
         return {
@@ -112,6 +116,10 @@ export default {
             this.language = language.text
             Toast.success(this.$t('user.change_language'))
             this.lanShow = false
+        },
+        logout() {
+            removeToken()
+            this.$router.replace('/login')
         }
     }
 }
