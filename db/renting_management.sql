@@ -3,15 +3,15 @@
 
  Source Server         : localhost_3306
  Source Server Type    : MySQL
- Source Server Version : 50723
+ Source Server Version : 50720
  Source Host           : localhost:3306
  Source Schema         : renting_management
 
  Target Server Type    : MySQL
- Target Server Version : 50723
+ Target Server Version : 50720
  File Encoding         : 65001
 
- Date: 03/03/2019 09:06:49
+ Date: 08/03/2019 16:33:14
 */
 
 SET NAMES utf8mb4;
@@ -99,7 +99,7 @@ CREATE TABLE `room`  (
 -- ----------------------------
 -- Records of room
 -- ----------------------------
-INSERT INTO `room` VALUES (1, '品牌好房 免费宽带', 3, '13555555555', '简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介', 9901, '1号楼1门101', '117.286371', '39.069145', 0);
+INSERT INTO `room` VALUES (1, '品牌好房 免费宽带', 3, '13555555555', '简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介', 9901, '1号楼1门101', '117.287233', '39.072142', 0);
 INSERT INTO `room` VALUES (2, '双林林城佳苑酒店式公寓 近地铁', 5, '13533333333', '简介简介', 5000, '1号楼3门503', '116.286371', '39.069145', 0);
 
 -- ----------------------------
