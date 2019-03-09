@@ -93,7 +93,7 @@ import BMap from 'BMap'
                     name: [
                         { required: true, message: '请输入房间名称！', trigger: 'blur' }
                     ],
-                    name: [
+                    desp: [
                         { required: true, message: '请输入简介！', trigger: 'blur' }
                     ],
                     address: [
@@ -116,7 +116,7 @@ import BMap from 'BMap'
                 if (val) {
                     // console.log(this.data)
                     this.form = this.data
-                    this.center = [this.data.longitude, this.data.latitude]
+                    this.center = [this.data.longitude || -0.143934, this.data.latitude || 51.495379]
                     this.$nextTick(() => {
                         this.createMap()
                     })
@@ -130,11 +130,12 @@ import BMap from 'BMap'
                 const vm = this
                 const div = this.$refs.div
                 vm.map = new BMap.Map(div)
-                vm.map.centerAndZoom(new BMap.Point(vm.center[0], vm.center[1]), 16)
+                vm.map.centerAndZoom(new BMap.Point(vm.center[0], vm.center[1]), 6)
                 var marker = new BMap.Marker(new BMap.Point(vm.center[0], vm.center[1]));
                 vm.map.addOverlay(marker);            //增加点
                 vm.map.enableScrollWheelZoom(true);
                 vm.map.addEventListener("click",function(e){
+                    console.log(e)
                     vm.map.clearOverlays();       
                     marker = new BMap.Marker(new BMap.Point(e.point.lng, e.point.lat));
                     vm.map.addOverlay(marker);
