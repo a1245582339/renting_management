@@ -8,16 +8,8 @@
             @click-left="onClickLeft"
             @click-right="onClickRight"
         />
-        <div class="amap-page-container">
-            <el-amap
-                style="height: 200px"
-                vid="amapDemo"  
-                :center="center"
-                :zoom="16"  
-                class="amap-demo"
-            >
-                <el-amap-marker vid="component-marker" :position="[lng, lat]" ></el-amap-marker>
-            </el-amap>
+        <div style="height: 300px" ref="div">
+            
         </div>
         <van-cell :title="$t('detail.name')" :label="room.name"/>
         <van-cell :title="$t('detail.desp')" :label="room.desp"/>
@@ -31,6 +23,7 @@
 import { communityIdToArea } from '@/utils/area';
 import { Dialog, Toast } from 'vant';
 import { updateOrder } from '@/api/order'
+import BMap from 'BMap'
 
 export default {
     data() {
@@ -41,7 +34,19 @@ export default {
             room: this.$route.query
         }
     },
+    mounted() {
+        this.createMap()
+    },
     methods: {
+        createMap() {
+            const vm = this
+            const div = this.$refs.div
+            vm.map = new BMap.Map(div)
+            vm.map.centerAndZoom(new BMap.Point(vm.center[0], vm.center[1]), 16)
+            var marker = new BMap.Marker(new BMap.Point(vm.center[0], vm.center[1]));
+            vm.map.addOverlay(marker);            //增加点
+            vm.map.enableScrollWheelZoom(true);
+        },
         onClickLeft() {
             history.go(-1)
         },

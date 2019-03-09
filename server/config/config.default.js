@@ -60,7 +60,7 @@ module.exports = appInfo => {
       // 密码
       password: '1',
       // 数据库名
-      database: 'library_seat_selecton',
+      database: 'renting_management',
     },
     // 是否加载到 app 上，默认开启
     app: true,
