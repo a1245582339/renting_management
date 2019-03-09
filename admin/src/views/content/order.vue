@@ -3,11 +3,6 @@
         <h1>
             订单管理
         </h1>
-        <div style="margin-top: 20px;">
-            <Input style="width: 300px; float: left" search enter-button placeholder="请输入关键字"
-                @on-search="fetchData" />
-            <div style="clear: both"></div>
-        </div>
         <Table style="margin-top: 20px" :loading="loading" :columns="columns" :data="data"></Table>
         <Page style="margin-top: 20px" :total="total" @on-change="pageChange" />
     </div>

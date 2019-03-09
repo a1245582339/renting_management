@@ -1,0 +1,254 @@
+{
+    "zh-CN": {
+        "login": {
+            "title": "登录",
+            "label": {
+                "id": "请输入学号",
+                "password": "请输入密码"
+            },
+            "fail": {
+                "empty": "请输入学号密码！",
+                "error": "学号或密码错误！"
+            }
+        },
+        "tab": {
+            "room": "房屋信息",
+            "order": "我的预约",
+            "user": "个人信息"
+        },
+        "search_label": "请输入关键词搜索",
+        "no_more": "没有更多了",
+        "confirm": "确认",
+        "cancel": "取消",
+        "complete": "完成",
+        "loading": "加载中...",
+        "detail": {
+            "title": "房间详情",
+            "return": "返回",
+            "order": "预约",
+            "name": "标题",
+            "desp": "简介",
+            "area": "区域",
+            "community": "小区",
+            "address": "地址",
+            "confirm": {
+                "title": "确定预约此房间？",
+                "msg": "预约后会有工作人员联系看房，请保持电话畅通",
+                "fail": "已预约过此房间！",
+                "success": "预约成功！"
+            }
+        },
+        "order": {
+            "status": {
+                "pending": "待联系",
+                "ordered": "已租"
+            },
+            "time": "预约时间："
+        },
+        "user": {
+            "id": "学号",
+            "name": "姓名",
+            "sex": "性别",
+            "male": "男",
+            "female": "女",
+            "university": "大学",
+            "tel": "手机号",
+            "password": "密码",
+            "language": "语言",
+            "change_password": "修改密码",
+            "success": "修改成功！",
+            "tel_dialog": {
+                "label": "手机号",
+                "placeholder": "请输入手机号",
+                "fail": "请输入正确手机号"
+            },
+            "password_dialog": {
+                "label": {
+                    "old": "原密码",
+                    "new": "新密码",
+                    "repeat": "重复新密码"
+                },
+                "placeholder": {
+                    "old": "请输入原密码",
+                    "new": "请输入新密码",
+                    "repeat": "请输重复新密码"
+                },
+                "fail": {
+                    "empty": "密码不可为空！",
+                    "repeat": "两次密码不一致！",
+                    "validate": "密码须以字母开头，长度在6~18之间，只能包含字母、数字和下划线！",
+                    "error": "原密码错误！"
+                }
+            },
+            "change_language": "重启应用后生效！"
+        }
+    },
+    "zh-HK": {
+        "login": {
+            "title": "登入",
+            "label": {
+                "id": "請輸入學號",
+                "password": "請輸入密碼"
+            },
+            "fail": {
+                "empty": "请输入學號密码！",
+                "error": "學號或密碼錯誤！"
+            }
+        },
+        "tab": {
+            "room": "房屋資訊",
+            "order": "我的預約",
+            "user": "個人資訊"
+        },
+        "search_label": "請輸入關鍵字搜索",
+        "no_more": "沒有更多了",
+        "confirm": "確認",
+        "cancel": "取消",
+        "complete": "完成",
+        "loading": "加載中...",
+        "detail": {
+            "title": "房間詳情",
+            "return": "返回",
+            "order": "預約",
+            "name": "標題",
+            "desp": "簡介",
+            "area": "區域",
+            "community": "社區",
+            "address": "地址",
+            "confirm": {
+                "title": "確定預約此房間？",
+                "msg": "預約後會有工作人員聯系看房，請保持電話暢通",
+                "fail": "已預約過此房間！",
+                "success": "預約成功！"
+            }
+        },
+        "order": {
+            "status": {
+                "pending": "待聯系",
+                "ordered": "已租"
+            },
+            "time": "預約時間："
+        },
+        "user": {
+            "id": "學號",
+            "name": "姓名",
+            "sex": "性別",
+            "male": "男",
+            "female": "女",
+            "university": "大學",
+            "tel": "手機號",
+            "password": "密碼",
+            "language": "語言",
+            "change_password": "修改密碼",
+            "success": "修改成功！",
+            "tel_dialog": {
+                "label": "手機號",
+                "placeholder": "請輸入手機號",
+                "fail": "請輸入正確手機號"
+            },
+            "password_dialog": {
+                "label": {
+                    "old": "原密碼",
+                    "new": "新密碼",
+                    "repeat": "重複新密碼"
+                },
+                "placeholder": {
+                    "old": "請輸入原密碼",
+                    "new": "請輸入新密碼",
+                    "repeat": "請輸重複新密碼"
+                },
+                "fail": {
+                    "empty": "密碼不可為空！",
+                    "repeat": "兩次密碼不一致！",
+                    "validate": "密碼須以字母開頭，長度在6~18之間，只能包含字母、數位和底線！",
+                    "error": "原密碼錯誤！"
+                }
+            },
+            "change_language": "重啓應用後生效！"
+        }
+    },
+    "en-US": {
+        "login": {
+            "title": "Login",
+            "label": {
+                "id": "Please enter your student number.",
+                "password": "Please enter your student password."
+            },
+            "fail": {
+                "empty": "Please enter the student number password!",
+                "error": "Error in school number or password!"
+            }
+        },
+        "tab": {
+            "room": "Room",
+            "order": "Order",
+            "user": "User"
+        },
+        "search_label": "Please enter a keyword search",
+        "no_more": "No more",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "complete": "Complete",
+        "loading": "Loading...",
+        "detail": {
+            "title": "Room detail",
+            "return": "Return",
+            "order": "Order",
+            "name": "Title",
+            "desp": "Desp",
+            "area": "Area",
+            "community": "Community",
+            "address": "Address",
+            "confirm": {
+                "title": "Are you sure to book this room?",
+                "msg": "After the appointment, there will be a staff member to contact the room, please keep the phone open.",
+                "fail": "Have reserved this room！",
+                "success": "The appointment is successful!"
+            }
+        },
+        "order": {
+            "status": {
+                "pending": "To be contacted",
+                "ordered": "Rented"
+            },
+            "time": "Appointment:"
+        },
+        "user": {
+            "id": "ID",
+            "name": "Name",
+            "sex": "Sex",
+            "male": "Male",
+            "female": "Female",
+            "university": "University",
+            "tel": "Tel",
+            "password": "Password",
+            "language": "Language",
+            "change_password": "Change Password",
+            "success": "Successfully modified！",
+            "tel_dialog": {
+                "label": "Tel",
+                "placeholder": "Please enter phone number",
+                "fail": "Please enter the correct phone number"
+            },
+            "password_dialog": {
+                "label": {
+                    "old": "Old password",
+                    "new": "New password",
+                    "repeat": "Repeat new password"
+                },
+                "placeholder": {
+                    "old": "Please enter the old password",
+                    "new": "Please enter the new password",
+                    "repeat": "Please repeat the new password"
+                },
+                "fail": {
+                    "empty": "Password cannot be empty!",
+                    "repeat": "The passwords are inconsistent twice!",
+                    "validate": "The password must start with a letter and be between 6 and 18 characters long. It can only contain letters, digits and the bottom line!",
+                    "error": "The original password is wrong!"
+                }
+            },
+            "change_language": "Effective after restarting the app!"
+        }
+    }
+}

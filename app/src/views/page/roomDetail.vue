@@ -1,9 +1,9 @@
 <template>
     <div>
         <van-nav-bar
-            title="房间详情"
-            left-text="返回"
-            right-text="预约"
+            :title="$t('detail.title')"
+            :left-text="$t('detail.return')"
+            :right-text="$t('detail.order')"
             left-arrow
             @click-left="onClickLeft"
             @click-right="onClickRight"
@@ -19,11 +19,11 @@
                 <el-amap-marker vid="component-marker" :position="[lng, lat]" ></el-amap-marker>
             </el-amap>
         </div>
-        <van-cell title="标题" :label="room.name"/>
-        <van-cell title="简介" :label="room.desp"/>
-        <van-cell title="区域" :label="communityIdToArea(room.area).city.label + communityIdToArea(room.area).district.label"/>
-        <van-cell title="小区" :label="room.community_name"/>
-        <van-cell title="地址" :label="room.address"/>
+        <van-cell :title="$t('detail.name')" :label="room.name"/>
+        <van-cell :title="$t('detail.desp')" :label="room.desp"/>
+        <van-cell :title="$t('detail.area')" :label="communityIdToArea(room.area).city.label + communityIdToArea(room.area).district.label"/>
+        <van-cell :title="$t('detail.community')" :label="room.community_name"/>
+        <van-cell :title="$t('detail.address')" :label="room.address"/>
     </div>
     
 </template>
@@ -47,20 +47,22 @@ export default {
         },
         onClickRight() {
             Dialog.confirm({
-                title: '确定预约此房间？',
-                message: '预约后会有工作人员联系看房，请保持电话畅通'
+                title: this.$t('detail.confirm.title'),
+                message: this.$t('detail.confirm.msg'),
+                "confirm-button-text": this.$t('confirm'),
+                "cancel-button-text": this.$t('cancel')
             }).then(async () => {
                 const res = await updateOrder({}, {
                     room_id: this.room.id,
                     stu_id: this.$store.state.user.id
                 })
                 if (res.data.code === 20000) {
-                    Toast.success('预约成功！');
+                    Toast.success(this.$t('detail.confirm.success'));
                     setTimeout(() => {
                         history.go(-1)
                     }, 2000)
                 } else {
-                    Toast.fail('已预约过此房间！');
+                    Toast.fail(this.$t('detail.confirm.fail'));
                 }
                 
             }).catch(() => {

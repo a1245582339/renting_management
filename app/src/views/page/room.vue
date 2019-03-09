@@ -1,10 +1,11 @@
 <template>
     <div>
-        <van-search placeholder="请输入搜索关键词" v-model="search_word" />
+        <van-search :placeholder="$t('search_label')" v-model="search_word" />
         <van-list
             v-model="loading"
             :finished="finished"
-            finished-text="没有更多了"
+            :finished-text="$t('no_more')"
+            :loading-text="$t('loading')"
             @load="onLoad"
         >
             <van-cell v-for="(item, index) in list" :key="index" :to="{name: 'detail', query: item}" :title="item.name" is-link :label="communityIdToArea(item.area).city.label + communityIdToArea(item.area).district.label + item.community_name" />
