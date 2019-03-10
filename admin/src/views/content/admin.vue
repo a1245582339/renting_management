@@ -102,6 +102,9 @@
             }
         },
         created() {
+            if (this.$store.state.user.role !== 1) {
+                this.$router.replace('/401')
+            }
             this.fetchData()
         },
         methods: {

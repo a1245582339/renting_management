@@ -1,192 +1,174 @@
 [{
-    "label": "北京",
+    "label": "伦敦",
     "value": 1,
     "children": [{
-        "label": "东城区",
+        "label": "Pocock street",
         "value": 1
     }, {
-        "label": "西城区",
+        "label": "Spitalfields街区",
         "value": 2
     }, {
-        "label": "崇文区",
+        "label": "Kings Cross街区",
         "value": 3
     }, {
-        "label": "宣武区",
+        "label": "Clerkenwell区",
         "value": 4
     }, {
-        "label": "朝阳区",
+        "label": "Hammersmith街区",
         "value": 5
     }, {
-        "label": "丰台区",
+        "label": "金斯顿",
         "value": 6
     }, {
-        "label": "石景山区",
+        "label": "Walthamstow区",
         "value": 7
     }, {
-        "label": "海淀区",
+        "label": "Kentish Town街区",
         "value": 8
     }, {
-        "label": "门头沟区",
+        "label": "Southwark区",
         "value": 9
     }, {
-        "label": "房山区",
+        "label": "Woburn Place",
         "value": 10
     }, {
-        "label": "通州区",
+        "label": "温布利区",
         "value": 11
     }, {
-        "label": "顺义区",
+        "label": "Notting Hill街区",
         "value": 12
     }, {
-        "label": "昌平区",
+        "label": "Bloomsbury街区",
         "value": 13
     }, {
-        "label": "大兴区",
+        "label": "Islington街区",
         "value": 14
     }, {
-        "label": "平谷区",
+        "label": "Victoria Road",
         "value": 15
     }, {
-        "label": "怀柔区",
+        "label": "Mile End区",
         "value": 16
     }, {
-        "label": "密云县",
+        "label": "Bethnal Green区",
         "value": 17
     }, {
-        "label": "延庆县",
+        "label": "Olympic Way街区",
         "value": 18
     }]
 }, {
-    "label": "天津",
+    "label": "费城",
     "value": 2,
     "children": [{
-        "label": "和平区",
+        "label": "德国真",
         "value": 19
     }, {
-        "label": "河东区",
+        "label": "中心城",
         "value": 20
     }, {
-        "label": "河西区",
+        "label": "西费城",
         "value": 21
     }, {
-        "label": "南开区",
+        "label": "Mautua区",
         "value": 22
     }, {
-        "label": "河北区",
+        "label": "Powelton区",
         "value": 23
     }, {
-        "label": "红桥区",
+        "label": "Chestnut区",
         "value": 24
     }, {
-        "label": "塘沽区",
+        "label": "Spruce Hill街区",
         "value": 25
     }, {
-        "label": "汉沽区",
+        "label": "天普大学区",
         "value": 26
     }, {
-        "label": "大港区",
+        "label": "大学区",
         "value": 27
     }, {
-        "label": "东丽区",
+        "label": "Overbrook区",
         "value": 28
     }, {
-        "label": "西青区",
+        "label": "Walnut Hill区",
         "value": 29
     }, {
-        "label": "津南区",
+        "label": "Garden Court区",
         "value": 30
     }, {
-        "label": "北辰区",
+        "label": "Footscray区",
         "value": 31
     }, {
-        "label": "武清区",
+        "label": "Bundoora区",
         "value": 32
     }, {
-        "label": "宝坻区",
+        "label": "Brunswick区",
         "value": 33
     }, {
-        "label": "宁河县",
+        "label": "Soho区",
         "value": 34
     }, {
-        "label": "静海县",
+        "label": "Mayfair区",
         "value": 35
     }, {
-        "label": "蓟 县",
+        "label": "Limehouse区",
         "value": 36
     }]
 }, {
-    "label": "河北",
+    "label": "墨尔本",
     "value": 3,
     "children": [{
-        "label": "石家庄",
+        "label": "Burwood区",
         "value": 37
     }, {
-        "label": "唐山",
+        "label": "墨尔本东北部",
         "value": 38
     }, {
-        "label": "秦皇岛",
+        "label": "South Yara区",
         "value": 39
     }, {
-        "label": "邯郸",
+        "label": "East Melbourne区",
         "value": 40
     }, {
-        "label": "邢台",
+        "label": "墨尔本南部",
         "value": 41
     }, {
-        "label": "保定",
+        "label": "莫尔文东区",
         "value": 42
     }, {
-        "label": "张家口",
+        "label": "Brunswich区",
         "value": 43
     }, {
-        "label": "承德",
+        "label": "Parkville区",
         "value": 44
     }, {
-        "label": "沧州",
+        "label": "Coburg区",
         "value": 45
     }, {
-        "label": "廊坊",
+        "label": "墨尔本市中心",
         "value": 46
     }, {
-        "label": "衡水",
+        "label": "南岸区",
         "value": 47
     }]
 }, {
-    "label": "山西",
+    "label": "利物浦",
     "value": 4,
     "children": [{
-        "label": "太原",
+        "label": "利物浦大学区",
         "value": 48
     }, {
-        "label": "大同",
+        "label": "利物浦市中心",
         "value": 49
     }, {
-        "label": "阳泉",
+        "label": "埃弗顿",
         "value": 50
     }, {
-        "label": "长治",
+        "label": "Wavetree区",
         "value": 51
     }, {
-        "label": "晋城",
+        "label": "Baltic Triangle街区",
         "value": 52
-    }, {
-        "label": "朔州",
-        "value": 53
-    }, {
-        "label": "忻州",
-        "value": 54
-    }, {
-        "label": "吕梁",
-        "value": 55
-    }, {
-        "label": "晋中",
-        "value": 56
-    }, {
-        "label": "临汾",
-        "value": 57
-    }, {
-        "label": "运城",
-        "value": 58
     }]
 }, {
     "label": "内蒙古",

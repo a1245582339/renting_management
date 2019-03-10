@@ -77,10 +77,30 @@
                     {
                         title: '小区名称',
                         key: 'community_name',
+                        width: 100,
+                        render: (h, params) => {
+                            return h('p', {
+                                style: {
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                }
+                            }, params.row.community_name)
+                        }
                     },
                     {
                         title: '联系电话',
                         key: 'tel',
+                        width: 100,
+                        render: (h, params) => {
+                            return h('p', {
+                                style: {
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                }
+                            }, params.row.tel)
+                        }
                     },
                     {
                         title: '价格（元/月）',

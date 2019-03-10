@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <router-view />
+      <router-view style="padding-bottom: 100px"/>
     </div>
     <van-tabbar v-model="active">
       <van-tabbar-item icon="home-o" to="room">{{$t("tab.room")}}</van-tabbar-item>
